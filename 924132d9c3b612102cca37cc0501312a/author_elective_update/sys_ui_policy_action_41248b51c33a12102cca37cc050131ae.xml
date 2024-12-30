@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action">
+    <sys_ui_policy_action action="DELETE">
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field>phone</field>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_ui_policy_action</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-30 05:01:06</sys_created_on>
+        <sys_id>41248b51c33a12102cca37cc050131ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>phone</sys_name>
+        <sys_package display_value="ChromaTech Customer Queries" source="x_1423612_chromate">924132d9c3b612102cca37cc0501312a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ChromaTech Customer Queries">924132d9c3b612102cca37cc0501312a</sys_scope>
+        <sys_update_name>sys_ui_policy_action_41248b51c33a12102cca37cc050131ae</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-30 05:01:06</sys_updated_on>
+        <table>x_1423612_chromate_chromatech_customer_queries</table>
+        <ui_policy display_value="Contact type’ is ‘Walk-in">83234f51c33a12102cca37cc05013154</ui_policy>
+        <value/>
+        <value_action>ignore</value_action>
+        <visible>true</visible>
+    </sys_ui_policy_action>
+    <sys_translated_text action="DELETE" query="documentkey=41248b51c33a12102cca37cc050131ae"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="ChromaTech Customer Queries">924132d9c3b612102cca37cc0501312a</application>
+        <file_path/>
+        <instance_id>3f58daf11b72b1506a85eb9b2d4bcbab</instance_id>
+        <instance_name>dev228931</instance_name>
+        <name>sys_ui_policy_action_41248b51c33a12102cca37cc050131ae</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_policy_action"><sys_ui_policy_action action="INSERT_OR_UPDATE"><cleared>false</cleared><disabled>ignore</disabled><field>phone</field><field_message/><field_message_type>none</field_message_type><mandatory>true</mandatory><sys_class_name>sys_ui_policy_action</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2024-12-30 05:01:06</sys_created_on><sys_id>41248b51c33a12102cca37cc050131ae</sys_id><sys_mod_count>0</sys_mod_count><sys_name>phone</sys_name><sys_package display_value="ChromaTech Customer Queries" source="x_1423612_chromate">924132d9c3b612102cca37cc0501312a</sys_package><sys_policy/><sys_scope display_value="ChromaTech Customer Queries">924132d9c3b612102cca37cc0501312a</sys_scope><sys_update_name>sys_ui_policy_action_41248b51c33a12102cca37cc050131ae</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2024-12-30 05:01:06</sys_updated_on><table>x_1423612_chromate_chromatech_customer_queries</table><ui_policy display_value="Contact type’ is ‘Walk-in">83234f51c33a12102cca37cc05013154</ui_policy><value/><value_action>ignore</value_action><visible>true</visible></sys_ui_policy_action><sys_translated_text action="delete_multiple" query="documentkey=41248b51c33a12102cca37cc050131ae"/></record_update>]]></payload>
+        <payload_hash>-1224086570</payload_hash>
+        <record_name>phone</record_name>
+        <reverted_from/>
+        <source>5e4132d9c3b612102cca37cc0501312e</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-30 05:01:06</sys_created_on>
+        <sys_id>703483d1c33a12102cca37cc0501319a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19415f070d10000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-30 05:01:06</sys_updated_on>
+        <type>UI Policy Action</type>
+        <update_guid>743483d1423a121074d7331b92730699</update_guid>
+        <update_guid_history>743483d1423a121074d7331b92730699:-1224086570</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-30 05:37:50</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_policy_action">sys_ui_policy_action</sys_db_object>
+        <sys_id>22478e0bbbab4700bdfbb41e53fc4000</sys_id>
+        <sys_metadata>41248b51c33a12102cca37cc050131ae</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>phone</sys_name>
+        <sys_package display_value="ChromaTech Customer Queries" source="x_1423612_chromate">924132d9c3b612102cca37cc0501312a</sys_package>
+        <sys_parent display_value="Contact type’ is ‘Walk-in">83234f51c33a12102cca37cc05013154</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="ChromaTech Customer Queries">924132d9c3b612102cca37cc0501312a</sys_scope>
+        <sys_scope_delete display_value="">3ea4ed332e764f0ea7a7cff0665a7e64</sys_scope_delete>
+        <sys_update_name>sys_ui_policy_action_41248b51c33a12102cca37cc050131ae</sys_update_name>
+        <sys_update_version display_value="sys_ui_policy_action_41248b51c33a12102cca37cc050131ae">703483d1c33a12102cca37cc0501319a</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-30 05:37:50</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

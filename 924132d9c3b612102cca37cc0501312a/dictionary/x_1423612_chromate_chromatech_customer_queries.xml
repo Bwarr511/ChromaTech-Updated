@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="7624fa9dc3b612102cca37cc05013194" extends="task" label="ChromaTech Customer Queries" max_length="40" name="x_1423612_chromate_chromatech_customer_queries" type="collection">
+        <element attributes="encode_utf8=false" label="Place" max_length="32" name="place" reference="cmn_location" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Phone" max_length="40" name="phone" type="string"/>
+        <element label="Products" max_length="32" name="products" reference="x_1423612_chromate_chromatech_sold_products" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Issue Category" max_length="40" name="issue_category" type="choice">
+            <choice/>
+        </element>
+        <element attributes="encode_utf8=false" label="Requester" max_length="32" name="requester" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="On Hold reason" max_length="40" name="on_hold_reason" type="choice">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="First Reported On" max_length="40" name="first_reported_on" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="Email" max_length="60" name="email" type="string"/>
+        <element label="VIP Query" max_length="40" name="vip_query" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Issue State" max_length="40" name="issue_state" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="New" value="new"/>
+                <element inactive_on_update="false" label="Closed" value="closed"/>
+                <element inactive_on_update="false" label="In-Progress" value="in progress"/>
+                <element inactive_on_update="false" label="On Hold" value="on hold"/>
+            </choice>
+        </element>
+    </element>
+</database>

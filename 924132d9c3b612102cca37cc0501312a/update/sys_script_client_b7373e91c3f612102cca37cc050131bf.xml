@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Date sold on can't be backdated, only current and future dates.</description>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Date Sold Validation</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+    // Check if the form is loading or if the new value is empty
+    if (isLoading || newValue === '') {
+        return;
+    }
+
+    var today = new Date();
+    today.setHours(0, 0, 0, 0); // Set time to midnight
+
+    var soldDate = new Date(newValue);
+
+    if (isNaN(soldDate.getTime())) {
+        g_form.showFieldMsg('u_date_sold_on', 'Please enter a valid date.', 'error');
+        return;
+    }
+
+
+    if (soldDate < today) {
+        // Error message
+        g_form.showFieldMsg('x_date_sold_on', 'The date sold cannot be in the past.', 'error');
+        g_form.setValue('x_date_sold_on', ''); 
+    } else {
+      ]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-30 04:06:45</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b7373e91c3f612102cca37cc050131bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Date Sold Validation</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ChromaTech Customer Queries" source="x_1423612_chromate">924132d9c3b612102cca37cc0501312a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ChromaTech Customer Queries">924132d9c3b612102cca37cc0501312a</sys_scope>
+        <sys_update_name>sys_script_client_b7373e91c3f612102cca37cc050131bf</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-30 04:06:45</sys_updated_on>
+        <table>x_1423612_chromate_chromatech_sold_products</table>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

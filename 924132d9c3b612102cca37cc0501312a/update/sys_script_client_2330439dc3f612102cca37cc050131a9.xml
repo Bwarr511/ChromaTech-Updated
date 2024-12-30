@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>The customer is limited to 7 Queries at a time, an alert will display and the query will be canceled.</description>
+        <field/>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Customer Query Count</name>
+        <order/>
+        <script><![CDATA[function onSubmit() {
+    var requesterId = g_form.getValue('requester'); 
+
+    if (requesterId) {
+        
+        var ga = new GlideAjax('CountCustomerQueries');
+        ga.addParam('sysparm_name', 'getQueryCount');
+        ga.addParam('sysparm_requesterId', requesterId); 
+        ga.getXMLAnswer(function(response) {
+            var queryCount = parseInt(response, 10); 
+
+            if (queryCount >= 7) {
+                
+                alert('Already 7 queries are present for this requester. Please delete any previous query then try to create a new one for this requester.');
+                
+                
+                g_form.submitted = false;
+                return false;
+            }
+        });]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-30 04:45:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2330439dc3f612102cca37cc050131a9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Customer Query Count</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="ChromaTech Customer Queries" source="x_1423612_chromate">924132d9c3b612102cca37cc0501312a</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="ChromaTech Customer Queries">924132d9c3b612102cca37cc0501312a</sys_scope>
+        <sys_update_name>sys_script_client_2330439dc3f612102cca37cc050131a9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-30 04:45:55</sys_updated_on>
+        <table>x_1423612_chromate_chromatech_customer_queries</table>
+        <type>onSubmit</type>
+        <ui_type>10</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

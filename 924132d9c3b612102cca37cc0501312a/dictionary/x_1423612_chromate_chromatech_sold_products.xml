@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="dd457211c3f612102cca37cc05013127" label="ChromaTech Sold Products" max_length="40" name="x_1423612_chromate_chromatech_sold_products" type="collection">
+        <element attributes="encode_utf8=false" label="Sold To" max_length="32" name="sold_to" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Product SubType" max_length="40" name="product_subtype" type="choice">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Product Name" max_length="40" name="product_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Date Sold On" max_length="40" name="date_sold_on" type="glide_date_time"/>
+        <element attributes="omit_sys_original=true" label="Cost" max_length="20" name="cost" type="currency"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Product Type" max_length="40" name="product_type" type="choice">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Serial Number" max_length="40" name="serial_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Warranty Expiring Date" max_length="40" name="warranty_expiring_date" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" label="Manufacturing Date" max_length="40" name="manufacturing_date" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Warranty Period (months)" max_length="40" name="warranty_period_months" type="integer"/>
+        <element label="is Extended Warranty" max_length="40" name="is_extended_warranty" type="boolean"/>
+        <element label="Warranty Extending Date" max_length="40" name="warranty_extending_date" type="glide_date_time"/>
+        <index name="index">
+            <element name="sold_to"/>
+        </index>
+    </element>
+</database>
