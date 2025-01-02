@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1423612_chromate.FetchRequesterDetails</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>FetchRequesterDetails</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var FetchRequesterDetails = Class.create();
+FetchRequesterDetails.prototype = {
+    initialize: function() {},
+
+    getRequesterDetails: function(requesterSysId) {
+        var result = {
+            company: 'N/A',
+            email: 'N/A',
+            mobile_phone: 'N/A',
+            department: 'N/A',
+            title: 'N/A'
+        };
+        
+        var requesterGR = new GlideRecord('sys_user');
+        if (requesterGR.get(requesterSysId)) {
+            result.email = requesterGR.email || 'N/A';
+            result.mobile_phone = requesterGR.mobile_phone || 'N/A';
+            result.title = requesterGR.title || 'N/A';
+
+            // Fetch company name
+            if (requesterGR.company) {
+                var companyGR = new GlideRecord('core_company');
+                if (companyGR.get(requesterGR.company)) {
+                    result.company = companyGR.name || 'N/A';
+                }
+            }
+
+            // Fetch department name
+            if (requesterGR.department) {
+                var departmentGR = new GlideRecord('cmn_department');
+                if (departmentGR.get(requesterGR.department)) {
+                    result.department = departmentGR.name || 'N/A';
+                }
+            }
+        }
+
+        return JSON.stringify(result);
+    },
+
+    type: 'FetchRequesterDetails'
+};
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-02 06:24:36</sys_created_on>
+        <sys_id>e5c3f61ac37256102cca37cc050131cc</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>FetchRequesterDetails</sys_name>
+        <sys_package display_value="ChromaTech Customer Queries" source="x_1423612_chromate">924132d9c3b612102cca37cc0501312a</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="ChromaTech Customer Queries">924132d9c3b612102cca37cc0501312a</sys_scope>
+        <sys_update_name>sys_script_include_e5c3f61ac37256102cca37cc050131cc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-02 06:27:39</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>e5c3f61ac37256102cca37cc050131cc</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-01-02 06:24:36</sys_created_on>
+        <sys_id>0d147a1ac37256102cca37cc05013194</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-01-02 06:24:36</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
